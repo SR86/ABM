@@ -1,0 +1,60 @@
+{
+  "status": "complete",
+  "layer": "logits",
+  "reduction": "mse",
+  "optimizer": "adam",
+  "train_diagnostic": {
+    "original_label_accuracy": 17.5,
+    "candidate_count": 40,
+    "candidate_poison_purity": 0.1,
+    "poison_recall": 1.0,
+    "clean_false_positive_rate": 1.0,
+    "clean_control": {
+      "count": 3,
+      "newclass_rate": 0.0
+    },
+    "clean_uncontrolled": {
+      "count": 33,
+      "newclass_rate": 0.0
+    },
+    "poison_control": {
+      "count": 1,
+      "newclass_rate": 0.0
+    },
+    "poison_uncontrolled": {
+      "count": 3,
+      "newclass_rate": 0.0
+    }
+  },
+  "identity_holdout": {
+    "original_label_accuracy": 15.0,
+    "candidate_count": 20,
+    "candidate_poison_purity": 0.1,
+    "poison_recall": 1.0,
+    "clean_false_positive_rate": 1.0,
+    "clean_control": {
+      "count": 0,
+      "newclass_rate": null
+    },
+    "clean_uncontrolled": {
+      "count": 18,
+      "newclass_rate": 0.0
+    },
+    "poison_control": {
+      "count": 0,
+      "newclass_rate": null
+    },
+    "poison_uncontrolled": {
+      "count": 2,
+      "newclass_rate": 0.0
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "ce": 2.6583876609802246,
+      "regularizer": 0.021750595420598984
+    }
+  ],
+  "note": "Small identity-holdout screening; not full paper reproduction; poison truth diagnostic only"
+}

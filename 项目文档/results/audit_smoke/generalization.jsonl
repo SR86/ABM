@@ -1,0 +1,2 @@
+{"stage": "nbab", "epoch": 1, "train_probe_accuracy": 10.0, "test_probe_accuracy": 10.0, "gap_pp": 0.0, "overfit_warning": false, "diagnostic_only": true, "updated_utc": "2026-11-18T02:54:48.098118+00:00"}
+{"stage": "teacher", "epoch": 1, "train_probe_accuracy": 30.0, "test_probe_accuracy": 10.0, "gap_pp": 20.0, "overfit_warning": true, "diagnostic_only": true, "updated_utc": "2026-11-18T02:54:50.113697+00:00"}

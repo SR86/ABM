@@ -1,0 +1,60 @@
+{
+  "badnets": {
+    "candidate_count": 39806,
+    "poisoned_in_candidates": 3577,
+    "clean_in_candidates": 36229,
+    "candidate_poison_purity": 0.0898608250012561,
+    "poison_recall": 0.7154,
+    "clean_false_positive_rate": 0.8050888888888889,
+    "control_trigger_newclass_rate_on_clean": 0.19491111111111115,
+    "selected_poison_count": 48,
+    "selected_clean_count": 452,
+    "control_generalization": {
+      "clean_control_training_samples": {
+        "count": 4488,
+        "newclass_prediction_rate_after_control_trigger": 0.9679144385026738
+      },
+      "clean_without_control_during_training": {
+        "count": 40512,
+        "newclass_prediction_rate_after_control_trigger": 0.10927626382306477
+      },
+      "poison_control_training_samples": {
+        "count": 512,
+        "newclass_prediction_rate_after_control_trigger": 0.998046875
+      },
+      "poison_without_control_during_training": {
+        "count": 4488,
+        "newclass_prediction_rate_after_control_trigger": 0.20320855614973263
+      }
+    }
+  },
+  "blend": {
+    "candidate_count": 43886,
+    "poisoned_in_candidates": 4510,
+    "clean_in_candidates": 39376,
+    "candidate_poison_purity": 0.10276625803217428,
+    "poison_recall": 0.902,
+    "clean_false_positive_rate": 0.8750222222222223,
+    "control_trigger_newclass_rate_on_clean": 0.12497777777777774,
+    "selected_poison_count": 69,
+    "selected_clean_count": 431,
+    "control_generalization": {
+      "clean_control_training_samples": {
+        "count": 4488,
+        "newclass_prediction_rate_after_control_trigger": 0.9623440285204992
+      },
+      "clean_without_control_during_training": {
+        "count": 40512,
+        "newclass_prediction_rate_after_control_trigger": 0.03221267772511848
+      },
+      "poison_control_training_samples": {
+        "count": 512,
+        "newclass_prediction_rate_after_control_trigger": 0.841796875
+      },
+      "poison_without_control_during_training": {
+        "count": 4488,
+        "newclass_prediction_rate_after_control_trigger": 0.013146167557932263
+      }
+    }
+  }
+}

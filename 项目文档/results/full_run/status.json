@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "experiments": {
+    "badnets": {
+      "status": "complete",
+      "returncode": 0,
+      "metrics_percent": {
+        "teacher": {
+          "ca": 67.29,
+          "asr": 96.46666666666667
+        },
+        "abm": {
+          "ca": 60.37,
+          "asr": 93.02222222222223
+        }
+      },
+      "error": null
+    },
+    "blend": {
+      "status": "complete",
+      "returncode": 0,
+      "metrics_percent": {
+        "teacher": {
+          "ca": 65.41,
+          "asr": 99.96666666666667
+        },
+        "abm": {
+          "ca": 61.65,
+          "asr": 32.53333333333333
+        }
+      },
+      "error": null
+    }
+  },
+  "updated_utc": "2026-11-19T05:41:04.406011+00:00",
+  "current_attack": "blend"
+}

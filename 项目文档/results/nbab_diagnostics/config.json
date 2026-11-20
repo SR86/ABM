@@ -1,0 +1,60 @@
+{
+  "train_size": 8000,
+  "holdout_size": 2000,
+  "epochs": 5,
+  "batch_size": 120,
+  "seed": 42,
+  "lr": 0.01,
+  "control_rate": 0.1,
+  "poison_rate": 0.1,
+  "architecture": "NAD-compatible CIFAR ResNet20 candidate, not confirmed ABM original",
+  "variants": [
+    [
+      "no_regularizer_sgd",
+      "logits",
+      "none",
+      "sgd"
+    ],
+    [
+      "logits_mse_sgd",
+      "logits",
+      "mse",
+      "sgd"
+    ],
+    [
+      "pooled_mse_sgd",
+      "pooled",
+      "mse",
+      "sgd"
+    ],
+    [
+      "stage3_mse_sgd",
+      "stage3",
+      "mse",
+      "sgd"
+    ],
+    [
+      "stage3_sum2000_sgd",
+      "stage3",
+      "sum2000",
+      "sgd"
+    ],
+    [
+      "stage3_sum2000_adam",
+      "stage3",
+      "sum2000",
+      "adam"
+    ],
+    [
+      "logits_mse_adam",
+      "logits",
+      "mse",
+      "adam"
+    ]
+  ],
+  "test_set_used": false,
+  "screening_only": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.15.0+cpu",
+  "numpy": "2.5.4"
+}

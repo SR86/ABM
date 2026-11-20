@@ -1,0 +1,7 @@
+.venv*/
+gotify.local.json
+__pycache__/
+.pytest_cache/
+tmp/
+data/
+results/**/*.pt

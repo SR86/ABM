@@ -1,0 +1,14 @@
+{"stage": "nbab", "epoch": 1, "loss": 2.60788094997406, "lr": 0.01}
+{"stage": "nbab", "epoch": 2, "loss": 2.4735785126686096, "lr": 0.01}
+{"stage": "nbab", "epoch": 3, "loss": 2.280999034643173, "lr": 0.01}
+{"stage": "nbab", "epoch": 4, "loss": 2.0908928513526917, "lr": 0.01}
+{"stage": "nbab", "epoch": 5, "loss": 1.9321121275424957, "lr": 0.01}
+{"stage": "nbab", "epoch": 6, "loss": 1.6634136587381363, "lr": 0.01}
+{"stage": "nbab", "epoch": 7, "loss": 1.3824819028377533, "lr": 0.01}
+{"stage": "nbab", "epoch": 8, "loss": 1.1498260647058487, "lr": 0.01}
+{"stage": "nbab", "epoch": 9, "loss": 0.9796020612120628, "lr": 0.01}
+{"stage": "nbab", "epoch": 10, "loss": 0.824471190571785, "lr": 0.01}
+{"stage": "teacher", "epoch": 1, "loss": 2.303426295518875, "lr": 0.001}
+{"stage": "teacher", "epoch": 2, "loss": 2.2105859220027924, "lr": 0.001}
+{"stage": "student", "epoch": 1, "loss": 0.19971708953380585, "lr": 0.001}
+{"stage": "student", "epoch": 2, "loss": 0.1664028763771057, "lr": 0.001}

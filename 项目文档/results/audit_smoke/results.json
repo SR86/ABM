@@ -1,0 +1,106 @@
+{
+  "status": "complete",
+  "validation_only": true,
+  "synthetic_data": true,
+  "config": {
+    "dataset": "cifar10",
+    "model_dataset": null,
+    "num_classes": 10,
+    "image_size": 32,
+    "data_root": "C:\\Users\\sr\\Desktop\\项目文档\\data\\cifar10",
+    "download": false,
+    "external_data": null,
+    "attack": "badnets",
+    "target_label": 0,
+    "poison_rate": 0.2,
+    "attack_trigger_size": 2,
+    "attack_position": [
+      27,
+      27
+    ],
+    "blend_alpha": 0.2,
+    "blend_pattern_mode": "fixed",
+    "alpha": 1000.0,
+    "delta": 2.5,
+    "gamma": 0.8,
+    "activation_mode": "label",
+    "control_rate": 0.2,
+    "control_trigger_size": 2,
+    "isolation_rate": 0.2,
+    "nbab_epochs": 1,
+    "nbab_lr": 0.0001,
+    "nbab_l2_reduction": "batch",
+    "teacher_epochs": 1,
+    "teacher_lr": 0.001,
+    "teacher_step_size": 2,
+    "teacher_lr_gamma": 0.1,
+    "student_epochs": 1,
+    "student_lr": 0.001,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "batch_size": 8,
+    "num_workers": 0,
+    "seed": 42,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "max_train_samples": null,
+    "max_test_samples": null,
+    "output_dir": "C:\\Users\\sr\\Desktop\\项目文档\\results\\audit_smoke",
+    "smoke_test": true
+  },
+  "started_utc": "2026-11-18T02:54:45.595574+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "device": "cpu",
+    "cuda": null
+  },
+  "data": {
+    "original_train": 40,
+    "original_clean_test": 20,
+    "effective_train": 40,
+    "effective_clean_test": 20,
+    "asr_test": 18
+  },
+  "isolation": {
+    "candidates": 40,
+    "selected": 8,
+    "rate": 0.2,
+    "requested_rate": 0.2,
+    "poison_purity_diagnostic_only": 0.25
+  },
+  "metrics_percent": {
+    "teacher": {
+      "ca": 10.0,
+      "asr": 100.0
+    },
+    "abm": {
+      "ca": 10.0,
+      "asr": 100.0
+    }
+  },
+  "average_activation": 0.045995235443115234,
+  "teacher_unchanged": true,
+  "teacher_state_sha256": "83c4d4ea4fea0a8355a892db4665336116abfe7457d454af414333da92d33e54",
+  "history": [
+    {
+      "stage": "nbab",
+      "epoch": 1,
+      "loss": 2.804176902770996,
+      "lr": 0.0001
+    },
+    {
+      "stage": "teacher",
+      "epoch": 1,
+      "loss": 2.3189825057983398,
+      "lr": 0.001
+    },
+    {
+      "stage": "student",
+      "epoch": 1,
+      "loss": 0.16289310157299042,
+      "lr": 0.001
+    }
+  ]
+}

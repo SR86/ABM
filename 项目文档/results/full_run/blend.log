@@ -1,0 +1,96 @@
+Microsoft Visual C++ Redistributable is not installed, this may lead to the DLL load failure.
+It can be downloaded at https://aka.ms/vs/17/release/vc_redist.x64.exe
+nbab     epoch   1 loss=1.707851 lr=0.01
+nbab     epoch   2 loss=1.261363 lr=0.01
+nbab     epoch   3 loss=1.043589 lr=0.01
+nbab     epoch   4 loss=0.869526 lr=0.01
+nbab     epoch   5 loss=0.711240 lr=0.01
+nbab     epoch   6 loss=0.549372 lr=0.01
+nbab     epoch   7 loss=0.412366 lr=0.01
+nbab     epoch   8 loss=0.297810 lr=0.01
+nbab     epoch   9 loss=0.218817 lr=0.01
+nbab     epoch  10 loss=0.148452 lr=0.01
+NBAB: 43886 candidates; 500 selected
+teacher  epoch   1 loss=2.174956 lr=0.1
+teacher  epoch   2 loss=1.369802 lr=0.1
+teacher  epoch   3 loss=1.023546 lr=0.01
+teacher  epoch   4 loss=0.929679 lr=0.01
+teacher  epoch   5 loss=0.836400 lr=0.001
+teacher  epoch   6 loss=0.816353 lr=0.001
+teacher  epoch   7 loss=0.802455 lr=0.0001
+teacher  epoch   8 loss=0.801169 lr=0.0001
+teacher  epoch   9 loss=0.799785 lr=1e-05
+teacher  epoch  10 loss=0.798266 lr=1e-05
+teacher  epoch  11 loss=0.798901 lr=1e-06
+teacher  epoch  12 loss=0.798399 lr=1e-06
+teacher  epoch  13 loss=0.800022 lr=1e-07
+teacher  epoch  14 loss=0.799173 lr=1e-07
+teacher  epoch  15 loss=0.799317 lr=1e-08
+teacher  epoch  16 loss=0.801038 lr=1e-08
+teacher  epoch  17 loss=0.797865 lr=1e-09
+teacher  epoch  18 loss=0.798657 lr=1e-09
+teacher  epoch  19 loss=0.799540 lr=1e-10
+teacher  epoch  20 loss=0.799087 lr=1e-10
+teacher  epoch  21 loss=0.798474 lr=1e-11
+teacher  epoch  22 loss=0.797154 lr=1e-11
+teacher  epoch  23 loss=0.798378 lr=1e-12
+teacher  epoch  24 loss=0.799260 lr=1e-12
+teacher  epoch  25 loss=0.798359 lr=1e-13
+teacher  epoch  26 loss=0.798748 lr=1e-13
+teacher  epoch  27 loss=0.797174 lr=1e-14
+teacher  epoch  28 loss=0.798002 lr=1e-14
+teacher  epoch  29 loss=0.799716 lr=1e-15
+teacher  epoch  30 loss=0.796952 lr=1e-15
+teacher  epoch  31 loss=0.799032 lr=1e-16
+teacher  epoch  32 loss=0.798078 lr=1e-16
+teacher  epoch  33 loss=0.798394 lr=1e-17
+NBAB: 43886 candidates; 500 selected
+Restored 33 completed epochs from teacher_epoch.pt
+teacher  epoch  34 loss=0.798906 lr=1e-17
+teacher  epoch  35 loss=0.800046 lr=1e-18
+teacher  epoch  36 loss=0.799532 lr=1e-18
+teacher  epoch  37 loss=0.798367 lr=1e-19
+teacher  epoch  38 loss=0.798982 lr=1e-19
+teacher  epoch  39 loss=0.800708 lr=1e-20
+teacher  epoch  40 loss=0.799807 lr=1e-20
+teacher  epoch  41 loss=0.800385 lr=1e-21
+teacher  epoch  42 loss=0.799419 lr=1e-21
+teacher  epoch  43 loss=0.798521 lr=1e-22
+teacher  epoch  44 loss=0.798637 lr=1e-22
+teacher  epoch  45 loss=0.796802 lr=1e-23
+teacher  epoch  46 loss=0.799400 lr=1e-23
+teacher  epoch  47 loss=0.799122 lr=1e-24
+teacher  epoch  48 loss=0.796889 lr=1e-24
+teacher  epoch  49 loss=0.798670 lr=1e-25
+teacher  epoch  50 loss=0.798966 lr=1e-25
+student  epoch   1 loss=10.760280 lr=0.01
+student  epoch   2 loss=9.890894 lr=0.01
+student  epoch   3 loss=8.768423 lr=0.01
+student  epoch   4 loss=7.492294 lr=0.01
+student  epoch   5 loss=7.107215 lr=0.01
+student  epoch   6 loss=5.072065 lr=0.01
+student  epoch   7 loss=3.769866 lr=0.01
+student  epoch   8 loss=3.302808 lr=0.01
+student  epoch   9 loss=2.404062 lr=0.01
+student  epoch  10 loss=2.014507 lr=0.01
+student  epoch  11 loss=1.831296 lr=0.01
+student  epoch  12 loss=1.563527 lr=0.01
+student  epoch  13 loss=1.173223 lr=0.01
+student  epoch  14 loss=1.182867 lr=0.01
+student  epoch  15 loss=0.978348 lr=0.01
+student  epoch  16 loss=0.903646 lr=0.01
+student  epoch  17 loss=1.292847 lr=0.01
+student  epoch  18 loss=0.987579 lr=0.01
+student  epoch  19 loss=1.042912 lr=0.01
+student  epoch  20 loss=1.061716 lr=0.01
+{
+  "teacher": {
+    "ca": 65.41,
+    "asr": 99.96666666666667
+  },
+  "abm": {
+    "ca": 61.65,
+    "asr": 32.53333333333333
+  }
+}
+Results: C:\Users\sr\Desktop\项目文档\results\cifar10_blend

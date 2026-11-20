@@ -1,0 +1,57 @@
+{
+  "train_size": 40,
+  "holdout_size": 20,
+  "epochs": 1,
+  "batch_size": 120,
+  "seed": 42,
+  "lr": 0.01,
+  "control_rate": 0.1,
+  "poison_rate": 0.1,
+  "architecture": "NAD-compatible CIFAR ResNet20 candidate, not confirmed ABM original",
+  "variants": [
+    [
+      "no_regularizer_sgd",
+      "logits",
+      "none",
+      "sgd"
+    ],
+    [
+      "logits_mse_sgd",
+      "logits",
+      "mse",
+      "sgd"
+    ],
+    [
+      "pooled_mse_sgd",
+      "pooled",
+      "mse",
+      "sgd"
+    ],
+    [
+      "stage3_mse_sgd",
+      "stage3",
+      "mse",
+      "sgd"
+    ],
+    [
+      "stage3_sum2000_sgd",
+      "stage3",
+      "sum2000",
+      "sgd"
+    ],
+    [
+      "stage3_sum2000_adam",
+      "stage3",
+      "sum2000",
+      "adam"
+    ],
+    [
+      "logits_mse_adam",
+      "logits",
+      "mse",
+      "adam"
+    ]
+  ],
+  "test_set_used": false,
+  "screening_only": true
+}

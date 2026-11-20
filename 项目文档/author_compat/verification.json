@@ -1,0 +1,6 @@
+{
+  "reference_state_dict_strict_load": true,
+  "four_outputs_bit_exact_after_loading_same_weights": true,
+  "parameters": 272474,
+  "scope": "CPU interface/architecture reference comparison; not proof of original ABM file"
+}

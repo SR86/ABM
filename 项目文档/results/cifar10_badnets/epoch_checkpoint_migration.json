@@ -1,0 +1,17 @@
+{
+  "reason": "Audited checkpoint-only upgrade; training equations unchanged",
+  "previous": {
+    "train": "dd8589af17573992a8c5742e3f7591e2584e7ed1e504d56f0a538847e422d15c",
+    "clean_test": "ff9e4518bd1df744578179de4b0d01fa0de53147a16a384681c78c4665feb67d",
+    "attack_test": "1eb58e50b38f8d94e7e2f8db3d548dc9717acc9d751230e6263416f5631491fe",
+    "implementation": {
+      "__init__.py": "bed8d5caa18bb3386a72978ba6e1da60d81196441acf0f862563cceccce82f50",
+      "attacks.py": "43388ce5d22833a2b783c2bbdb9089a7ce64e689f24dd5942b08f1f71b68b65b",
+      "checkpoints.py": "d63a13ad12791d4ced1f68096650650e9e0f95b66636fd32ff9a327c470d174d",
+      "data.py": "90273670eac27ab5991c499abb4776e29f204b35f59e1edd62a7bad0ca9aa2d1",
+      "method.py": "b45ec0a8aa13de2d9d22f4a6f19ce4b3885b2e7454bb4bd7eff603d6740783a7",
+      "models.py": "c4580b4a4c13814324f91e5c32012c940f3c8d254f480544969d673a29259e7d",
+      "runner.py": "12ff6cba09db0abd691b8f1384a2a2b834961da04237611cdbe5a75c0934c82c"
+    }
+  }
+}

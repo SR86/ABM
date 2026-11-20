@@ -1,0 +1,172 @@
+{
+  "status": "complete",
+  "validation_only": true,
+  "synthetic_data": false,
+  "config": {
+    "dataset": "external",
+    "model_dataset": "cifar10",
+    "num_classes": 10,
+    "image_size": 32,
+    "data_root": "C:\\Users\\sr\\Desktop\\项目文档\\data\\cifar10",
+    "download": false,
+    "external_data": "C:\\Users\\sr\\Desktop\\项目文档\\data\\cifar10_validation\\blend_512_256.pt",
+    "attack": "external",
+    "target_label": 0,
+    "poison_rate": 0.1,
+    "attack_trigger_size": 2,
+    "attack_position": [
+      27,
+      27
+    ],
+    "blend_alpha": 0.2,
+    "blend_pattern_mode": "fixed",
+    "alpha": 1000.0,
+    "delta": 2.5,
+    "gamma": 0.8,
+    "activation_mode": "label",
+    "control_rate": 0.1,
+    "control_trigger_size": 2,
+    "isolation_rate": 0.01,
+    "nbab_epochs": 10,
+    "nbab_lr": 0.01,
+    "nbab_l2_reduction": "batch",
+    "teacher_epochs": 2,
+    "teacher_lr": 0.001,
+    "teacher_step_size": 2,
+    "teacher_lr_gamma": 0.1,
+    "student_epochs": 2,
+    "student_lr": 0.001,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "batch_size": 64,
+    "num_workers": 0,
+    "seed": 42,
+    "device": "auto",
+    "cpu_threads": 2,
+    "max_train_samples": 512,
+    "max_test_samples": 256,
+    "output_dir": "C:\\Users\\sr\\Desktop\\项目文档\\results\\cifar10_blend_validation",
+    "smoke_test": false
+  },
+  "started_utc": "2026-11-17T17:05:16.140330+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "device": "cpu",
+    "cuda": null
+  },
+  "data": {
+    "original_train": 512,
+    "original_clean_test": 256,
+    "effective_train": 512,
+    "effective_clean_test": 256,
+    "asr_test": 230
+  },
+  "isolation": {
+    "candidates": 477,
+    "selected": 5,
+    "rate": 0.009765625,
+    "requested_rate": 0.01,
+    "poison_purity_diagnostic_only": 0.0
+  },
+  "metrics_percent": {
+    "teacher": {
+      "ca": 10.15625,
+      "asr": 100.0
+    },
+    "abm": {
+      "ca": 10.15625,
+      "asr": 100.0
+    }
+  },
+  "average_activation": 0.07150823622941971,
+  "teacher_unchanged": true,
+  "teacher_state_sha256": "8f0a944475864e6d7de658a0cd4a664d54a37cc0b07674fc22c89ec72d8cc5cd",
+  "history": [
+    {
+      "stage": "nbab",
+      "epoch": 1,
+      "loss": 2.633613884449005,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 2,
+      "loss": 2.426647275686264,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 3,
+      "loss": 2.2527948021888733,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 4,
+      "loss": 2.029616594314575,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 5,
+      "loss": 1.9028849750757217,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 6,
+      "loss": 1.6075332164764404,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 7,
+      "loss": 1.3479877263307571,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 8,
+      "loss": 1.1489446461200714,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 9,
+      "loss": 0.9827464893460274,
+      "lr": 0.01
+    },
+    {
+      "stage": "nbab",
+      "epoch": 10,
+      "loss": 0.8351448401808739,
+      "lr": 0.01
+    },
+    {
+      "stage": "teacher",
+      "epoch": 1,
+      "loss": 2.3057425916194916,
+      "lr": 0.001
+    },
+    {
+      "stage": "teacher",
+      "epoch": 2,
+      "loss": 2.2131011486053467,
+      "lr": 0.001
+    },
+    {
+      "stage": "student",
+      "epoch": 1,
+      "loss": 0.21033605933189392,
+      "lr": 0.001
+    },
+    {
+      "stage": "student",
+      "epoch": 2,
+      "loss": 0.1731046885251999,
+      "lr": 0.001
+    }
+  ]
+}

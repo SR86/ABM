@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "layer": "stage3",
+  "reduction": "mse",
+  "optimizer": "sgd",
+  "train_diagnostic": {
+    "original_label_accuracy": 32.7875,
+    "candidate_count": 7999,
+    "candidate_poison_purity": 0.10001250156269534,
+    "poison_recall": 1.0,
+    "clean_false_positive_rate": 0.9998611111111111,
+    "clean_control": {
+      "count": 734,
+      "newclass_rate": 0.0
+    },
+    "clean_uncontrolled": {
+      "count": 6466,
+      "newclass_rate": 0.0001546551190844417
+    },
+    "poison_control": {
+      "count": 66,
+      "newclass_rate": 0.0
+    },
+    "poison_uncontrolled": {
+      "count": 734,
+      "newclass_rate": 0.0
+    }
+  },
+  "identity_holdout": {
+    "original_label_accuracy": 31.4,
+    "candidate_count": 1999,
+    "candidate_poison_purity": 0.10005002501250625,
+    "poison_recall": 1.0,
+    "clean_false_positive_rate": 0.9994444444444445,
+    "clean_control": {
+      "count": 0,
+      "newclass_rate": null
+    },
+    "clean_uncontrolled": {
+      "count": 1800,
+      "newclass_rate": 0.0005555555555555556
+    },
+    "poison_control": {
+      "count": 0,
+      "newclass_rate": null
+    },
+    "poison_uncontrolled": {
+      "count": 200,
+      "newclass_rate": 0.0
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "ce": 2.346983368396759,
+      "regularizer": 0.1788629728378146
+    },
+    {
+      "epoch": 2,
+      "ce": 2.1889598965644836,
+      "regularizer": 0.003099427254346665
+    },
+    {
+      "epoch": 3,
+      "ce": 2.0713009071350097,
+      "regularizer": 0.005386723040719517
+    },
+    {
+      "epoch": 4,
+      "ce": 1.9873481380939484,
+      "regularizer": 0.00534796362160705
+    },
+    {
+      "epoch": 5,
+      "ce": 1.9268267196416855,
+      "regularizer": 0.005355315505294129
+    }
+  ],
+  "note": "Small identity-holdout screening; not full paper reproduction; poison truth diagnostic only"
+}

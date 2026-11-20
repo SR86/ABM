@@ -1,0 +1,103 @@
+Microsoft Visual C++ Redistributable is not installed, this may lead to the DLL load failure.
+It can be downloaded at https://aka.ms/vs/17/release/vc_redist.x64.exe
+nbab     epoch   1 loss=1.759133 lr=0.01
+nbab     epoch   2 loss=1.287255 lr=0.01
+nbab     epoch   3 loss=1.064518 lr=0.01
+nbab     epoch   4 loss=0.879340 lr=0.01
+nbab     epoch   5 loss=0.717264 lr=0.01
+nbab     epoch   6 loss=0.557681 lr=0.01
+nbab     epoch   7 loss=0.429612 lr=0.01
+nbab     epoch   8 loss=0.293482 lr=0.01
+nbab     epoch   9 loss=0.209547 lr=0.01
+nbab     epoch  10 loss=0.153523 lr=0.01
+NBAB: 39806 candidates; 500 selected
+teacher  epoch   1 loss=2.106322 lr=0.1
+teacher  epoch   2 loss=1.546579 lr=0.1
+teacher  epoch   3 loss=1.151587 lr=0.01
+Microsoft Visual C++ Redistributable is not installed, this may lead to the DLL load failure.
+It can be downloaded at https://aka.ms/vs/17/release/vc_redist.x64.exe
+NBAB: 39806 candidates; 500 selected
+Microsoft Visual C++ Redistributable is not installed, this may lead to the DLL load failure.
+It can be downloaded at https://aka.ms/vs/17/release/vc_redist.x64.exe
+NBAB: 39806 candidates; 500 selected
+teacher  epoch   1 loss=2.106322 lr=0.1
+teacher  epoch   2 loss=1.546579 lr=0.1
+teacher  epoch   3 loss=1.151587 lr=0.01
+teacher  epoch   4 loss=0.917988 lr=0.01
+teacher  epoch   5 loss=0.786014 lr=0.001
+teacher  epoch   6 loss=0.756464 lr=0.001
+teacher  epoch   7 loss=0.734291 lr=0.0001
+teacher  epoch   8 loss=0.731829 lr=0.0001
+teacher  epoch   9 loss=0.729830 lr=1e-05
+teacher  epoch  10 loss=0.729150 lr=1e-05
+teacher  epoch  11 loss=0.729375 lr=1e-06
+teacher  epoch  12 loss=0.728073 lr=1e-06
+teacher  epoch  13 loss=0.729374 lr=1e-07
+teacher  epoch  14 loss=0.727227 lr=1e-07
+teacher  epoch  15 loss=0.728596 lr=1e-08
+teacher  epoch  16 loss=0.730174 lr=1e-08
+teacher  epoch  17 loss=0.727962 lr=1e-09
+teacher  epoch  18 loss=0.729234 lr=1e-09
+teacher  epoch  19 loss=0.729620 lr=1e-10
+teacher  epoch  20 loss=0.729890 lr=1e-10
+teacher  epoch  21 loss=0.727850 lr=1e-11
+teacher  epoch  22 loss=0.726781 lr=1e-11
+teacher  epoch  23 loss=0.728650 lr=1e-12
+teacher  epoch  24 loss=0.729095 lr=1e-12
+teacher  epoch  25 loss=0.728324 lr=1e-13
+teacher  epoch  26 loss=0.729640 lr=1e-13
+teacher  epoch  27 loss=0.727145 lr=1e-14
+teacher  epoch  28 loss=0.727334 lr=1e-14
+teacher  epoch  29 loss=0.729540 lr=1e-15
+teacher  epoch  30 loss=0.726147 lr=1e-15
+teacher  epoch  31 loss=0.728859 lr=1e-16
+teacher  epoch  32 loss=0.728884 lr=1e-16
+teacher  epoch  33 loss=0.727241 lr=1e-17
+teacher  epoch  34 loss=0.729352 lr=1e-17
+teacher  epoch  35 loss=0.728852 lr=1e-18
+teacher  epoch  36 loss=0.729684 lr=1e-18
+teacher  epoch  37 loss=0.728256 lr=1e-19
+teacher  epoch  38 loss=0.729682 lr=1e-19
+teacher  epoch  39 loss=0.730029 lr=1e-20
+teacher  epoch  40 loss=0.727467 lr=1e-20
+teacher  epoch  41 loss=0.728951 lr=1e-21
+teacher  epoch  42 loss=0.728833 lr=1e-21
+teacher  epoch  43 loss=0.728195 lr=1e-22
+teacher  epoch  44 loss=0.727834 lr=1e-22
+teacher  epoch  45 loss=0.726335 lr=1e-23
+teacher  epoch  46 loss=0.728874 lr=1e-23
+teacher  epoch  47 loss=0.729522 lr=1e-24
+teacher  epoch  48 loss=0.726599 lr=1e-24
+teacher  epoch  49 loss=0.729640 lr=1e-25
+teacher  epoch  50 loss=0.728347 lr=1e-25
+student  epoch   1 loss=9.645395 lr=0.01
+student  epoch   2 loss=8.476854 lr=0.01
+student  epoch   3 loss=7.145897 lr=0.01
+student  epoch   4 loss=6.210485 lr=0.01
+student  epoch   5 loss=5.403337 lr=0.01
+student  epoch   6 loss=4.172154 lr=0.01
+student  epoch   7 loss=3.615139 lr=0.01
+student  epoch   8 loss=3.404711 lr=0.01
+student  epoch   9 loss=2.786019 lr=0.01
+student  epoch  10 loss=2.328681 lr=0.01
+student  epoch  11 loss=2.506549 lr=0.01
+student  epoch  12 loss=2.360297 lr=0.01
+student  epoch  13 loss=2.998502 lr=0.01
+student  epoch  14 loss=2.686480 lr=0.01
+student  epoch  15 loss=1.494196 lr=0.01
+student  epoch  16 loss=1.225090 lr=0.01
+student  epoch  17 loss=1.055091 lr=0.01
+student  epoch  18 loss=1.094134 lr=0.01
+student  epoch  19 loss=1.056677 lr=0.01
+student  epoch  20 loss=0.776086 lr=0.01
+{
+  "teacher": {
+    "ca": 67.29,
+    "asr": 96.46666666666667
+  },
+  "abm": {
+    "ca": 60.37,
+    "asr": 93.02222222222223
+  }
+}
+Results: C:\Users\sr\Desktop\项目文档\results\cifar10_badnets

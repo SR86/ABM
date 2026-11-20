@@ -1,0 +1,18 @@
+{
+  "paper": "Anti-Backdoor_Model_A_Novel_Algorithm_to_Remove_Backdoors_in_a_Non-Invasive_Way.pdf",
+  "paper_sha256": "aec5f5357852c4a593fd735d21100935f3bd8e4cf3113397de02e5c6dc1de870",
+  "author_repository": "https://gitee.com/dugu1076/ABM",
+  "author_commit": "24908a4c1ce82c2df69b77cbcd21809a6e950654",
+  "author_source_sha256": {
+    "config.py": "582d4bbcd699ef57b496452f2396515da7732c7377ce770f3d657faa8bbf8da0",
+    "data_loader_Bab.py": "e84a97174146881ca4c11ad7bc8f970087c5d44cfc95b7c5445a2cc0e5a671f9",
+    "Main_poision_Bab.py": "5f9d7e0ada6a92653723e8dedea7922657ba4708a2bc7d83997f6271ebd6da45",
+    "Util.py": "5d111303db425ee9aaa9468f6e122046f3f6258ab1ec9464b2bb6fe06a142389"
+  },
+  "tested_environment": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "numpy": "2.5.4"
+  },
+  "fidelity_policy": "Paper equations take precedence; author code fills unspecified details. See README for deviations and missing artifacts."
+}
