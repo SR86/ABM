@@ -1,0 +1,15 @@
+{
+  "scope": "Failure analysis against local paper pages 5-6 and released author source; not reproduction success",
+  "paper": {"nbab_epochs": 10, "optimizer": "SGD", "alpha": 1000, "activation": "previous layer of softmax", "l2_reduction": "not specified"},
+  "author_script": {"nbab_epochs": 7, "optimizer": "Adam", "lr": 0.01, "poison_rate": 0.05, "shuffle": false, "penalty": "all-batch third-output squared sum / 2000", "forward": "separate", "network": "resnet(depth=20), original file missing"},
+  "differences_requiring_controlled_tests": [
+    "Joint versus separate forward changes BatchNorm and gradients; current 12-job experiment isolates this with fixed masked logits loss.",
+    "Author penalty includes unchanged examples; separate-forward BatchNorm makes their penalty nonzero, verified in pairing_bn_probe.json.",
+    "Author attack injection takes priority over control injection; implementing this requires poison identities and must be labeled an oracle construction diagnostic, never claimed as deployable filtering.",
+    "Author Blend samples a fresh grayscale pattern per image; current diagnostics use a fixed pattern.",
+    "Author code uses 5% poisoning; current paper-oriented diagnostics use 10%.",
+    "Current 8000 training identities and ResNet20 candidate are diagnostic scope, not full paper ResNet18 results."
+  ],
+  "next_order": ["Finish paired-forward experiment and inspect per-epoch purity, recall and control generalization", "Test whole-batch penalty separately if BN effect is material", "Construct explicit author-code compatibility experiment with all deviations disclosed", "Validate promising non-oracle configuration at full data/model scope before final CA/ASR claims"],
+  "notification": "Gotify confirmation receipt 187; completion/failure watcher attached"
+}

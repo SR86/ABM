@@ -1,0 +1,14 @@
+{
+  "joint": {
+    "control_squared_sum": 3497.140625,
+    "unchanged_squared_sum": 0.0,
+    "all_sum_div_2000": 1.7485703125,
+    "bn_batches": 1
+  },
+  "separate": {
+    "control_squared_sum": 3488.313232421875,
+    "unchanged_squared_sum": 41.65415954589844,
+    "all_sum_div_2000": 1.764983642578125,
+    "bn_batches": 2
+  }
+}

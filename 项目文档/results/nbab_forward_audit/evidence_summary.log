@@ -1,0 +1,123 @@
+{
+  "updated_utc": "2026-11-22T16:06:53.456402+00:00",
+  "author_teacher_schedule": {
+    "source": "tmp/author_abm/Util.py:458",
+    "zero_based_epochs_0_1": 0.1,
+    "epochs_2_19": 0.01,
+    "epochs_20_onward": 0.0001,
+    "script_total_epochs": 30,
+    "interpretation": "Author schedule differs from paper literal StepLR; causal comparison pending."
+  },
+  "teacher_schedules": {
+    "badnets": {
+      "final_metrics": {
+        "ca": 67.29,
+        "asr": 96.46666666666667
+      },
+      "selected_history": [
+        {
+          "stage": "teacher",
+          "epoch": 1,
+          "loss": 2.106321777820587,
+          "lr": 0.1
+        },
+        {
+          "stage": "teacher",
+          "epoch": 2,
+          "loss": 1.5465788009643555,
+          "lr": 0.1
+        },
+        {
+          "stage": "teacher",
+          "epoch": 4,
+          "loss": 0.9179884590625763,
+          "lr": 0.010000000000000002
+        },
+        {
+          "stage": "teacher",
+          "epoch": 6,
+          "loss": 0.7564642086029053,
+          "lr": 0.0010000000000000002
+        },
+        {
+          "stage": "teacher",
+          "epoch": 10,
+          "loss": 0.7291500082015991,
+          "lr": 1.0000000000000004e-05
+        },
+        {
+          "stage": "teacher",
+          "epoch": 20,
+          "loss": 0.7298895499706268,
+          "lr": 1.0000000000000006e-10
+        },
+        {
+          "stage": "teacher",
+          "epoch": 50,
+          "loss": 0.7283473450660706,
+          "lr": 1.0000000000000014e-25
+        }
+      ],
+      "interpretation": "Paper literally specifies 10x decay every 2 epochs. Very small later LR is evidence of a limitation, not proof of a typo or permission to relabel a changed schedule as exact reproduction."
+    },
+    "blend": {
+      "final_metrics": {
+        "ca": 65.41,
+        "asr": 99.96666666666667
+      },
+      "selected_history": [
+        {
+          "stage": "teacher",
+          "epoch": 1,
+          "loss": 2.174956105709076,
+          "lr": 0.1
+        },
+        {
+          "stage": "teacher",
+          "epoch": 2,
+          "loss": 1.3698020401000977,
+          "lr": 0.1
+        },
+        {
+          "stage": "teacher",
+          "epoch": 4,
+          "loss": 0.9296792702674865,
+          "lr": 0.010000000000000002
+        },
+        {
+          "stage": "teacher",
+          "epoch": 6,
+          "loss": 0.8163525431632995,
+          "lr": 0.0010000000000000002
+        },
+        {
+          "stage": "teacher",
+          "epoch": 10,
+          "loss": 0.7982658463001251,
+          "lr": 1.0000000000000004e-05
+        },
+        {
+          "stage": "teacher",
+          "epoch": 20,
+          "loss": 0.7990868715763092,
+          "lr": 1.0000000000000006e-10
+        },
+        {
+          "stage": "teacher",
+          "epoch": 50,
+          "loss": 0.7989655156135559,
+          "lr": 1.0000000000000014e-25
+        }
+      ],
+      "interpretation": "Paper literally specifies 10x decay every 2 epochs. Very small later LR is evidence of a limitation, not proof of a typo or permission to relabel a changed schedule as exact reproduction."
+    }
+  },
+  "epoch_evaluation_trajectory_checks": [
+    {
+      "job": "badnets_logits_alpha_0_sgd",
+      "compared_epochs": 5,
+      "max_loss_difference": 0.0,
+      "meaning": "Same first epochs with added evaluation; numerical loss check, not proof of all model state equality."
+    }
+  ]
+}

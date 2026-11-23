@@ -1,5 +1,7 @@
 # Anti-Backdoor Model 论文复现
 
+> **2026-11-23 归档状态：已停止复现，尚未达到论文指标。** 全量实验及62组后续诊断、排查结论和未解决差异见 [复现记录与失败分析](REPRODUCTION_HISTORY.md)。早期报告保留为历史记录，不能作为成功复现的证明。
+
 本项目依据 Chen 等人的 *Anti-Backdoor Model: A Novel Algorithm to Remove Backdoors in a Non-Invasive Way*（IEEE TIFS 2024，DOI：10.1109/TIFS.2024.3436508）实现 NBAB 隔离、教师训练、学生蒸馏和 ABM 推理。项目目录中的论文 PDF 是主要依据；[论文页面](https://ieeexplore.ieee.org/document/10620313)和[作者公开代码](https://gitee.com/dugu1076/ABM)用于核对。本次源码核对基于提交 `24908a4c1ce82c2df69b77cbcd21809a6e950654`，下载副本位于 `tmp/author_abm/`。
 
 ## 实现范围

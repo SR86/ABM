@@ -1,0 +1,10 @@
+{
+  "status": "running",
+  "stage": "nbab",
+  "epoch": 7,
+  "epochs": 7,
+  "batch": 62,
+  "batches": 67,
+  "pid": 28476,
+  "updated_utc": "2026-11-22T16:58:25.694423+00:00"
+}

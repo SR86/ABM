@@ -1,0 +1,10 @@
+{
+  "ce": 2.5136959552764893,
+  "regularizer": 0.0,
+  "ce_gradient_norm": 2.2789978556276362,
+  "regularizer_gradient_norm": 0.0,
+  "near_shape": [
+    120,
+    11
+  ]
+}

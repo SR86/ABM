@@ -1,0 +1,178 @@
+{
+  "status": "complete",
+  "kind": "nbab_diagnostics",
+  "experiments": {
+    "badnets_logits_alpha_0.1_sgd": {
+      "status": "complete",
+      "layer": "logits",
+      "reduction": "mse",
+      "optimizer": "sgd",
+      "alpha": 0.1,
+      "train_diagnostic": {
+        "original_label_accuracy": 10.0,
+        "candidate_count": 20,
+        "candidate_poison_purity": 0.1,
+        "poison_recall": 1.0,
+        "clean_false_positive_rate": 1.0,
+        "clean_control": {
+          "count": 2,
+          "newclass_rate": 0.0
+        },
+        "clean_uncontrolled": {
+          "count": 16,
+          "newclass_rate": 0.0
+        },
+        "poison_control": {
+          "count": 0,
+          "newclass_rate": null
+        },
+        "poison_uncontrolled": {
+          "count": 2,
+          "newclass_rate": 0.0
+        }
+      },
+      "identity_holdout": {
+        "original_label_accuracy": 10.0,
+        "candidate_count": 20,
+        "candidate_poison_purity": 0.1,
+        "poison_recall": 1.0,
+        "clean_false_positive_rate": 1.0,
+        "clean_control": {
+          "count": 0,
+          "newclass_rate": null
+        },
+        "clean_uncontrolled": {
+          "count": 18,
+          "newclass_rate": 0.0
+        },
+        "poison_control": {
+          "count": 0,
+          "newclass_rate": null
+        },
+        "poison_uncontrolled": {
+          "count": 2,
+          "newclass_rate": 0.0
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "ce": 2.5737366676330566,
+          "regularizer": 5.626591104146428e-08,
+          "identity_holdout": {
+            "original_label_accuracy": 10.0,
+            "candidate_count": 20,
+            "candidate_poison_purity": 0.1,
+            "poison_recall": 1.0,
+            "clean_false_positive_rate": 1.0,
+            "clean_control": {
+              "count": 0,
+              "newclass_rate": null
+            },
+            "clean_uncontrolled": {
+              "count": 18,
+              "newclass_rate": 0.0
+            },
+            "poison_control": {
+              "count": 0,
+              "newclass_rate": null
+            },
+            "poison_uncontrolled": {
+              "count": 2,
+              "newclass_rate": 0.0
+            }
+          }
+        }
+      ],
+      "note": "Small identity-holdout screening; not full paper reproduction; poison truth diagnostic only"
+    },
+    "blend_logits_alpha_0.1_sgd": {
+      "status": "complete",
+      "layer": "logits",
+      "reduction": "mse",
+      "optimizer": "sgd",
+      "alpha": 0.1,
+      "train_diagnostic": {
+        "original_label_accuracy": 10.0,
+        "candidate_count": 20,
+        "candidate_poison_purity": 0.1,
+        "poison_recall": 1.0,
+        "clean_false_positive_rate": 1.0,
+        "clean_control": {
+          "count": 2,
+          "newclass_rate": 0.0
+        },
+        "clean_uncontrolled": {
+          "count": 16,
+          "newclass_rate": 0.0
+        },
+        "poison_control": {
+          "count": 0,
+          "newclass_rate": null
+        },
+        "poison_uncontrolled": {
+          "count": 2,
+          "newclass_rate": 0.0
+        }
+      },
+      "identity_holdout": {
+        "original_label_accuracy": 10.0,
+        "candidate_count": 20,
+        "candidate_poison_purity": 0.1,
+        "poison_recall": 1.0,
+        "clean_false_positive_rate": 1.0,
+        "clean_control": {
+          "count": 0,
+          "newclass_rate": null
+        },
+        "clean_uncontrolled": {
+          "count": 18,
+          "newclass_rate": 0.0
+        },
+        "poison_control": {
+          "count": 0,
+          "newclass_rate": null
+        },
+        "poison_uncontrolled": {
+          "count": 2,
+          "newclass_rate": 0.0
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "ce": 2.5644001960754395,
+          "regularizer": 4.490458849204515e-08,
+          "identity_holdout": {
+            "original_label_accuracy": 10.0,
+            "candidate_count": 20,
+            "candidate_poison_purity": 0.1,
+            "poison_recall": 1.0,
+            "clean_false_positive_rate": 1.0,
+            "clean_control": {
+              "count": 0,
+              "newclass_rate": null
+            },
+            "clean_uncontrolled": {
+              "count": 18,
+              "newclass_rate": 0.0
+            },
+            "poison_control": {
+              "count": 0,
+              "newclass_rate": null
+            },
+            "poison_uncontrolled": {
+              "count": 2,
+              "newclass_rate": 0.0
+            }
+          }
+        }
+      ],
+      "note": "Small identity-holdout screening; not full paper reproduction; poison truth diagnostic only"
+    }
+  },
+  "updated_utc": "2026-11-22T15:58:00.962458+00:00",
+  "supervisor_pid": 29676,
+  "current_attack": "blend",
+  "current_experiment": "blend_logits_alpha_0.1_sgd"
+}

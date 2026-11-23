@@ -41,10 +41,10 @@ def write(path, value):
     temp.replace(path)
 
 
-def seed():
-    random.seed(42)
-    np.random.seed(42)
-    torch.manual_seed(42)
+def seed(value=42):
+    random.seed(value)
+    np.random.seed(value)
+    torch.manual_seed(value)
 
 
 def regularizer(left, right, mask, kind, strength=1000.):
@@ -90,6 +90,10 @@ def main():
     parser.add_argument('--train-size', type=int, default=8000)
     parser.add_argument('--holdout-size', type=int, default=2000)
     parser.add_argument('--epochs', type=int, default=5)
+    parser.add_argument('--seed', type=int, default=42)
+    parser.add_argument('--separate-forward', action='store_true')
+    parser.add_argument('--evaluate-each-epoch', action='store_true')
+    parser.add_argument('--coefficients', type=float, nargs='+', help='Predeclared alpha grid; requires --strength-scan')
     parser.add_argument('--strength-scan', action='store_true', help='Fixed logits/SGD; vary only alpha over a predefined grid')
     parser.add_argument('--output', type=Path, default=ROOT/'results/nbab_diagnostics')
     args = parser.parse_args()
@@ -99,15 +103,20 @@ def main():
     torch.use_deterministic_algorithms(True)
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=True)
-    coefficients = (0., .01, .1, 1., 10., 100., 1000.)
+    if args.coefficients and not args.strength_scan:
+        parser.error('--coefficients requires --strength-scan')
+    coefficients = tuple(args.coefficients) if args.coefficients else (0., .01, .1, 1., 10., 100., 1000.)
+    if any(not math.isfinite(v) or v < 0 for v in coefficients) or len(set(coefficients)) != len(coefficients):
+        parser.error('Coefficients must be unique, finite and nonnegative')
     variants = [(f'logits_alpha_{value:g}_sgd', 'logits', 'mse', 'sgd') for value in coefficients] if args.strength_scan else VARIANTS
     strengths = {item[0]:value for item,value in zip(variants, coefficients)} if args.strength_scan else {item[0]:1000. for item in variants}
     config = dict(train_size=args.train_size, holdout_size=args.holdout_size, epochs=args.epochs,
-                  batch_size=120, seed=42, lr=.01, control_rate=.1, poison_rate=.1,
+                  batch_size=120, seed=args.seed, lr=.01, control_rate=.1, poison_rate=.1,
                   architecture='NAD-compatible CIFAR ResNet20 candidate, not confirmed ABM original',
                   variants=variants, regularization_strengths=strengths, test_set_used=False, screening_only=True,
                   python=sys.version, torch=str(torch.__version__), numpy=np.__version__)
     config_path = output/'config.json'
+    config.update(separate_forward=args.separate_forward, evaluate_each_epoch=args.evaluate_each_epoch)
     if config_path.exists() and json.loads(config_path.read_text()) != json.loads(json.dumps(config)):
         raise ValueError('Existing diagnostic configuration differs')
     write(config_path, config)
@@ -148,11 +157,11 @@ def main():
             state['experiments'][job] = dict(status='running')
             write(output/'status.json', state)
             try:
-                seed()
+                seed(args.seed)
                 model = resnet(depth=20, num_classes=11, near_mode=layer)
-                control = torch.randperm(len(train), generator=torch.Generator().manual_seed(42))[:int(.1*len(train))]
+                control = torch.randperm(len(train), generator=torch.Generator().manual_seed(args.seed))[:int(.1*len(train))]
                 controlled = _ControlledDataset(train, control, 2, 10)
-                loader = DataLoader(controlled, batch_size=120, shuffle=True, generator=torch.Generator().manual_seed(44))
+                loader = DataLoader(controlled, batch_size=120, shuffle=True, generator=torch.Generator().manual_seed(args.seed+2))
                 optimizer = (torch.optim.SGD(model.parameters(), lr=.01, momentum=.9, weight_decay=1e-4)
                              if optimizer_name == 'sgd' else torch.optim.Adam(model.parameters(), lr=.01, weight_decay=1e-4))
                 history = restore_epoch(folder/'epoch.pt', model, optimizer, loader)
@@ -166,9 +175,15 @@ def main():
                                 batch=batch, batches=len(loader), pid=os.getpid(), updated_utc=datetime.now(timezone.utc).isoformat()))
                             last_ping = time.monotonic()
                         optimizer.zero_grad(set_to_none=True)
-                        result = model(torch.cat((images, original)))
-                        logits, original_logits = result[-1].chunk(2)
-                        near, reference = result[2].chunk(2)
+                        if args.separate_forward:
+                            result = model(images)
+                            paired = model(original)
+                            logits, original_logits = result[-1], paired[-1]
+                            near, reference = result[2], paired[2]
+                        else:
+                            result = model(torch.cat((images, original)))
+                            logits, original_logits = result[-1].chunk(2)
+                            near, reference = result[2].chunk(2)
                         ce = F.cross_entropy(logits, labels)
                         penalty = regularizer(near, reference, mask, reduction, strengths[name])
                         loss = ce + penalty
@@ -186,6 +201,8 @@ def main():
                         reg_sum += penalty.item()*len(images)
                         count += len(images)
                     row = dict(epoch=epoch+1, ce=ce_sum/count, regularizer=reg_sum/count)
+                    if args.evaluate_each_epoch:
+                        row['identity_holdout'] = evaluate(model, validation, holdout_poison, [], 120)
                     history.append(row)
                     save_epoch(folder/'epoch.pt', model, optimizer, history, loader)
                     with (folder/'history.jsonl').open('a') as stream:

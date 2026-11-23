@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "experiments": {
+    "joint": {
+      "returncode": 0,
+      "status": "complete"
+    },
+    "separate": {
+      "returncode": 0,
+      "status": "complete"
+    }
+  },
+  "updated_utc": "2026-11-22T16:47:31.336403+00:00",
+  "current": "separate"
+}

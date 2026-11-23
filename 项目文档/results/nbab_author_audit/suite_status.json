@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "current": "oracle_disjoint",
+  "experiments": {
+    "overlap_allowed": {
+      "returncode": 0,
+      "status": "complete"
+    },
+    "oracle_disjoint": {
+      "returncode": 0,
+      "status": "complete"
+    }
+  },
+  "updated_utc": "2026-11-22T16:58:34.842440+00:00"
+}
